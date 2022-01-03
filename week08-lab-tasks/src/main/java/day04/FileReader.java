@@ -16,7 +16,7 @@ public class FileReader {
 
     public int findSmallestTemperatureSpread(String filename) {
         try {
-            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/weather.dat"));
+            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/datamunging/" + filename));
 
             int minSpreed = 1000;
             int minDay = 0;
@@ -40,7 +40,7 @@ public class FileReader {
 
     public String findSmallestTeamDifference(String filename) {
         try {
-            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/football.dat"));
+            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/datamunging/" + filename));
 
             int minDifference = 1000;
             String minName = null;
